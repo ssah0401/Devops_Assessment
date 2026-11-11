@@ -1,0 +1,7 @@
+bucket         = "devops-tfstate-000000000000-us-east-1"
+key            = "assessment/terraform.tfstate"
+region         = "us-east-1"
+dynamodb_table = "devops-terraform-locks"
+encrypt        = true
+profile        = "account-a"
+allowed_account_ids = ["000000000000"]

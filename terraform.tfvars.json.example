@@ -1,0 +1,67 @@
+{
+  "instances": {
+    "web": {
+      "instance_type": "t3.micro",
+      "key_name": "assessment-web",
+      "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAwPXb0e7chvD/zWpzGeSLsCXBHxGpICk0eW5I6Sw6JH shashanksah@shashanksah-mac",
+      "environment": "assessment",
+      "owner": "devops",
+      "root_volume": {
+        "type": "gp2",
+        "size": 10
+      }
+    },
+    "worker": {
+      "instance_type": "t3.small",
+      "key_name": "assessment-worker",
+      "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKWrhYKzKJY6h2PZ2GTsLt+5TTWSxR2Z73WkvRU27IA0 shashanksah@shashanksah-mac",
+      "environment": "assessment",
+      "owner": "devops",
+      "root_volume": {
+        "type": "gp3",
+        "size": 16
+      }
+    },
+    "batch": {
+      "instance_type": "t3.medium",
+      "key_name": "assessment-batch",
+      "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICg+FTCmifVIVFTNe8qLruPdIa4AUUheQIJBQJnYvUEn shashanksah@shashanksah-mac",
+      "environment": "assessment",
+      "owner": "devops",
+      "root_volume": {
+        "type": "standard",
+        "size": 20
+      }
+    },
+    "api": {
+      "instance_type": "m5.large",
+      "key_name": "assessment-api",
+      "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDSqxU0e8I2sEdN6nACJXHoSg8V0UAhGUs1JkWSwjC0R shashanksah@shashanksah-mac",
+      "environment": "assessment",
+      "owner": "devops",
+      "root_volume": {
+        "type": "io1",
+        "size": 24,
+        "iops": 1000
+      }
+    },
+    "critical-db": {
+      "instance_type": "m5.xlarge",
+      "key_name": "assessment-critical-db",
+      "public_key": "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMnb8mL0nAWAkTWIKRmuJFsblqyryhQicqtmwevVakQ+ shashanksah@shashanksah-mac",
+      "environment": "assessment",
+      "owner": "devops",
+      "root_volume": {
+        "type": "io2",
+        "size": 32,
+        "iops": 3000
+      }
+    }
+  },
+  "credential_pgp_keys": {
+    "engine": "keybase:replace-engine",
+    "ci": "keybase:replace-ci",
+    "alice": "keybase:replace-alice",
+    "bob": "keybase:replace-bob"
+  }
+}
